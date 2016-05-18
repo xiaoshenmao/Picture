@@ -57,8 +57,6 @@
     
     //添加到图片上
     [self.imageDown addGestureRecognizer:pan];
-    
-    
 }
 
 - (void)setUp:(UIPanGestureRecognizer *)pan
@@ -73,8 +71,6 @@
         NSLog(@"%s",__func__);
         self.HUD.frame =self.view.bounds;
         //获取截取的面积
-        
-        
     }else if (pan.state == UIGestureRecognizerStateChanged)
     {
         CGRect frame = CGRectMake(self.location.x, self.location.y, location.x - self.location.x, location.y - self.location.y);
@@ -98,8 +94,6 @@
         
         //关闭上下文
         UIGraphicsEndImageContext();
-        
-        
         
     }else if (pan.state == UIGestureRecognizerStateEnded)
     {
